@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Slideshow</title>
+  <link rel="stylesheet" href="assets/presentation.css" />
+</head>
+<body>
+  <div class="deck-controller" id="deckController">
+    <button type="button" class="deck-controller-toggle" id="deckControllerToggle" aria-expanded="false" aria-controls="deckControllerPanel">
+      Decks
+    </button>
+    <div class="deck-controller-panel" id="deckControllerPanel">
+      <div class="deck-controller-header">
+        <div>
+          <div class="deck-controller-title">Deck manager</div>
+          <div class="deck-controller-subtitle" id="currentDeckMeta">Loading deck...</div>
+        </div>
+        <button type="button" class="deck-controller-close" id="deckControllerClose" aria-label="Close deck manager">Close</button>
+      </div>
+      <label class="deck-select-label" for="deckSelect">Current deck</label>
+      <div class="deck-select-row">
+        <select id="deckSelect"></select>
+        <button type="button" id="deckOpenBtn">Open</button>
+      </div>
+      <div class="deck-actions">
+        <button type="button" id="deckCopyLinkBtn">Copy link</button>
+      </div>
+      <div class="deck-list-title">Available decks</div>
+      <div class="deck-list" id="deckList"></div>
+      <div class="deck-controller-note">Add decks in <code>assets/decks/index.js</code>.</div>
+    </div>
+  </div>
+
+  <div class="progress-bar">
+    <div class="progress-fill" id="progressFill"></div>
+  </div>
+
+  <div class="slide-counter-wrap" id="slideCounterWrap">
+    <div class="slide-counter" id="slideCounter">1 / 1</div>
+    <div class="slide-settings" id="slideSettings">
+      <div class="slide-settings-title">Jump to slide</div>
+      <div class="slide-settings-row">
+        <input type="number" id="slideJumpInput" min="1" step="1" placeholder="1-1" />
+        <button type="button" id="slideJumpBtn">Go</button>
+      </div>
+      <div class="slide-settings-hint">Press Enter to jump</div>
+      <div class="slide-settings-toggle">
+        <span>Image-only mode</span>
+        <label class="toggle-switch">
+          <input type="checkbox" id="imageOnlyToggle" />
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+      <div class="slide-settings-toggle">
+        <span>Hide controls until hover</span>
+        <label class="toggle-switch">
+          <input type="checkbox" id="controlsHoverToggle" />
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+      <div class="slide-settings-section">
+        <div class="slide-settings-title">Random spinner</div>
+        <textarea id="attendeeList" placeholder="One name per line or comma-separated"></textarea>
+        <div class="slide-settings-toggle">
+          <span>Show spinner</span>
+          <label class="toggle-switch">
+            <input type="checkbox" id="spinnerToggle" />
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+        <div class="slide-settings-hint">Use commas or new lines to separate names.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="presentation-container" id="presentationContainer"></div>
+
+  <div class="spinner-panel" id="spinnerPanel" aria-hidden="true">
+    <div class="spinner-card">
+      <div class="spinner-header">
+        <h2>Random Picker</h2>
+        <button type="button" class="spinner-close" id="spinnerClose">Close</button>
+      </div>
+      <div class="spinner-body">
+        <div class="spinner-wheel-wrap">
+          <div class="spinner-pointer"></div>
+          <div class="spinner-wheel" id="spinnerWheel">
+            <canvas id="spinnerCanvas" width="220" height="220"></canvas>
+          </div>
+        </div>
+        <div class="spinner-controls">
+          <button type="button" id="spinButton">Spin</button>
+          <div class="spinner-result" id="spinnerResult">Winner: -</div>
+          <div class="spinner-hint" id="spinnerHint">Add names in the settings panel to enable.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" class="spinner-fab" id="spinnerFab" aria-label="Toggle spinner">Spin</button>
+
+  <div class="keyboard-hint">Use arrow keys or spacebar to navigate</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="assets/decks/index.js"></script>
+  <script src="assets/presentation.js"></script>
+</body>
+</html>
