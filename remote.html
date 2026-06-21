@@ -24,7 +24,7 @@
       min-height: 100dvh;
       padding: max(20px, env(safe-area-inset-top)) 18px max(24px, env(safe-area-inset-bottom));
       display: grid;
-      grid-template-rows: auto auto minmax(260px, 1fr) auto;
+      grid-template-rows: auto minmax(250px, 46dvh) minmax(220px, 1fr);
       gap: 18px;
     }
     .header {
@@ -54,7 +54,6 @@
     }
     .status.connected .status-dot { background: #22c55e; }
     .now-playing {
-      border-top: 1px solid #374151;
       border-bottom: 1px solid #374151;
       padding: 16px 2px;
     }
@@ -74,14 +73,14 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 14px;
-      min-height: 0;
+      min-height: 130px;
     }
     .nav-button {
       border: 1px solid #4b5563;
       border-radius: 8px;
       background: #1f2937;
       color: #fff;
-      min-height: 220px;
+      min-height: 130px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -133,10 +132,83 @@
       padding: 0 14px;
       font-size: 1.1rem;
     }
+    .controls {
+      min-height: 0;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: 14px;
+    }
+    .notes {
+      min-height: 0;
+      border-top: 1px solid #374151;
+      padding-top: 14px;
+      display: grid;
+      grid-template-rows: auto 1fr;
+      gap: 10px;
+    }
+    .notes-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .notes-header h2 {
+      margin: 0;
+      font-size: 1rem;
+    }
+    .notes-hint {
+      color: #9ca3af;
+      font-size: 0.8rem;
+    }
+    .notes-content {
+      min-height: 0;
+      overflow-y: auto;
+      padding-right: 8px;
+      color: #e5e7eb;
+      font-size: 0.92rem;
+      line-height: 1.38;
+    }
+    .notes-content h1,
+    .notes-content h2,
+    .notes-content h3 {
+      color: #fff;
+      line-height: 1.2;
+    }
+    .notes-content h1 { font-size: 1.15rem; margin: 0 0 12px; }
+    .notes-content h2 { font-size: 1.05rem; margin: 20px 0 8px; }
+    .notes-content h3 { font-size: 0.95rem; margin: 16px 0 6px; }
+    .notes-content p { margin: 0 0 9px; }
+    .notes-content ul { margin: 0 0 9px 18px; padding: 0; }
+    .notes-content li { margin: 0 0 4px; }
+    .notes-content blockquote {
+      margin: 10px 0;
+      padding: 8px 10px;
+      border-left: 3px solid #818cf8;
+      color: #d1d5db;
+      background: #1f2937;
+    }
+    .notes-content strong { color: #fff; }
+    .notes-content::-webkit-scrollbar { width: 8px; }
+    .notes-content::-webkit-scrollbar-thumb { background: #4b5563; border-radius: 4px; }
     @media (max-width: 420px) {
       .remote { gap: 14px; }
-      .nav-button { min-height: 190px; }
+      .remote { grid-template-rows: auto minmax(225px, 44dvh) minmax(200px, 1fr); }
+      .nav-button { min-height: 115px; }
       .small-button { padding: 0 12px; }
+    }
+    @media (min-width: 760px) and (orientation: landscape) {
+      .remote {
+        width: min(100%, 1100px);
+        grid-template-columns: minmax(300px, 0.9fr) minmax(340px, 1.1fr);
+        grid-template-rows: auto 1fr;
+      }
+      .header { grid-column: 1 / -1; }
+      .controls { min-height: 0; }
+      .notes {
+        border-top: 0;
+        border-left: 1px solid #374151;
+        padding: 0 0 0 18px;
+      }
     }
   </style>
 </head>
@@ -150,29 +222,41 @@
       </div>
     </header>
 
-    <section class="now-playing" aria-live="polite">
-      <p class="deck-title" id="deckTitle">Waiting for presentation</p>
-      <p class="slide-position"><span id="currentSlide">-</span> / <span id="totalSlides">-</span></p>
-    </section>
-
-    <section class="primary-controls" aria-label="Slide navigation">
-      <button type="button" class="nav-button" data-command="previous" aria-label="Previous slide">
-        <span class="nav-icon" aria-hidden="true">&#8592;</span>
-        <span class="nav-label">Previous</span>
-      </button>
-      <button type="button" class="nav-button" data-command="next" aria-label="Next slide">
-        <span class="nav-icon" aria-hidden="true">&#8594;</span>
-        <span class="nav-label">Next</span>
-      </button>
-    </section>
-
-    <section class="secondary-controls" aria-label="Jump controls">
-      <button type="button" class="small-button" data-command="first">First</button>
-      <div class="jump-control">
-        <input type="number" id="slideInput" min="1" inputmode="numeric" aria-label="Slide number" placeholder="Slide" />
-        <button type="button" class="small-button" id="goButton">Go</button>
+    <section class="controls" aria-label="Slide controls">
+      <div class="now-playing" aria-live="polite">
+        <p class="deck-title" id="deckTitle">Waiting for presentation</p>
+        <p class="slide-position"><span id="currentSlide">-</span> / <span id="totalSlides">-</span></p>
       </div>
-      <button type="button" class="small-button" data-command="last">Last</button>
+
+      <section class="primary-controls" aria-label="Slide navigation">
+        <button type="button" class="nav-button" data-command="previous" aria-label="Previous slide">
+          <span class="nav-icon" aria-hidden="true">&#8592;</span>
+          <span class="nav-label">Previous</span>
+        </button>
+        <button type="button" class="nav-button" data-command="next" aria-label="Next slide">
+          <span class="nav-icon" aria-hidden="true">&#8594;</span>
+          <span class="nav-label">Next</span>
+        </button>
+      </section>
+
+      <section class="secondary-controls" aria-label="Jump controls">
+        <button type="button" class="small-button" data-command="first">First</button>
+        <div class="jump-control">
+          <input type="number" id="slideInput" min="1" inputmode="numeric" aria-label="Slide number" placeholder="Slide" />
+          <button type="button" class="small-button" id="goButton">Go</button>
+        </div>
+        <button type="button" class="small-button" data-command="last">Last</button>
+      </section>
+    </section>
+
+    <section class="notes" aria-label="Lesson plan">
+      <div class="notes-header">
+        <h2>Lesson Plan</h2>
+        <span class="notes-hint" id="notesHint">Waiting for deck</span>
+      </div>
+      <article class="notes-content" id="notesContent">
+        <p>Start the presentation to load its lesson plan.</p>
+      </article>
     </section>
   </main>
 
@@ -184,6 +268,13 @@
     const totalSlides = document.getElementById('totalSlides');
     const slideInput = document.getElementById('slideInput');
     const goButton = document.getElementById('goButton');
+    const notesContent = document.getElementById('notesContent');
+    const notesHint = document.getElementById('notesHint');
+    const planFiles = {
+      june21: 'june21-lesson-outline.md',
+      june7: 'june7-lesson-outline.md'
+    };
+    let loadedPlan = null;
 
     function setConnected(connected) {
       status.classList.toggle('connected', connected);
@@ -196,6 +287,77 @@
       totalSlides.textContent = state.totalSlides || '-';
       if (state.totalSlides) {
         slideInput.max = String(state.totalSlides);
+      }
+      loadLessonPlan(state.deckId);
+    }
+
+    function stripMarkdown(text) {
+      return text
+        .replace(/\*\*(.*?)\*\*/g, '$1')
+        .replace(/\[(.*?)\]\([^)]*\)/g, '$1')
+        .replace(/`([^`]+)`/g, '$1');
+    }
+
+    function appendTextElement(tag, text) {
+      const element = document.createElement(tag);
+      element.textContent = stripMarkdown(text);
+      notesContent.appendChild(element);
+      return element;
+    }
+
+    function renderLessonPlan(markdown) {
+      notesContent.replaceChildren();
+      let list = null;
+
+      markdown.split(/\r?\n/).forEach(rawLine => {
+        const line = rawLine.trim();
+        if (!line) {
+          list = null;
+          return;
+        }
+        if (line.startsWith('# ')) {
+          appendTextElement('h1', line.slice(2));
+          list = null;
+        } else if (line.startsWith('## ')) {
+          appendTextElement('h2', line.slice(3));
+          list = null;
+        } else if (line.startsWith('### ')) {
+          appendTextElement('h3', line.slice(4));
+          list = null;
+        } else if (line.startsWith('> ')) {
+          appendTextElement('blockquote', line.slice(2));
+          list = null;
+        } else if (line.startsWith('- ')) {
+          if (!list) {
+            list = document.createElement('ul');
+            notesContent.appendChild(list);
+          }
+          const item = document.createElement('li');
+          item.textContent = stripMarkdown(line.slice(2));
+          list.appendChild(item);
+        } else {
+          appendTextElement('p', line);
+          list = null;
+        }
+      });
+    }
+
+    async function loadLessonPlan(deckId) {
+      const fileName = planFiles[deckId];
+      if (!fileName || fileName === loadedPlan) return;
+      loadedPlan = fileName;
+      notesHint.textContent = 'Loading notes';
+
+      try {
+        const response = await fetch('/' + fileName, { cache: 'no-store' });
+        if (!response.ok) throw new Error('Plan unavailable');
+        renderLessonPlan(await response.text());
+        notesHint.textContent = 'Scroll for notes';
+      } catch (error) {
+        loadedPlan = null;
+        notesContent.replaceChildren();
+        appendTextElement('p', 'Lesson plan unavailable on this server.');
+        notesHint.textContent = 'Unavailable';
       }
     }
 

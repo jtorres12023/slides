@@ -38,7 +38,7 @@ Run the local server on the presentation computer. Put the computer and phone on
 1. Open the slideshow on the computer using the local server URL.
 2. Look in the server terminal for the printed `Phone remote` URL.
 3. Open that URL on the phone.
-4. Use Previous, Next, First, Last, or jump to a slide number.
+4. Use Previous, Next, First, Last, or jump to a slide number. The lower part of the phone screen shows a scrollable lesson plan for the active deck.
 
 The remote is intentionally simple and has no authentication. It is available only from the local Node server, not the GitHub Pages site.
 
