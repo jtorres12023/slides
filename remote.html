@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#111827" />
+  <title>Slide Remote</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100dvh;
+      background: #111827;
+      color: #f9fafb;
+      font-family: "Segoe UI", Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      overscroll-behavior: none;
+    }
+    button, input { font: inherit; }
+    button { touch-action: manipulation; }
+    .remote {
+      width: min(100%, 680px);
+      min-height: 100dvh;
+      padding: max(20px, env(safe-area-inset-top)) 18px max(24px, env(safe-area-inset-bottom));
+      display: grid;
+      grid-template-rows: auto auto minmax(260px, 1fr) auto;
+      gap: 18px;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 1.35rem;
+      letter-spacing: 0;
+    }
+    .status {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+      color: #d1d5db;
+      white-space: nowrap;
+    }
+    .status-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #ef4444;
+    }
+    .status.connected .status-dot { background: #22c55e; }
+    .now-playing {
+      border-top: 1px solid #374151;
+      border-bottom: 1px solid #374151;
+      padding: 16px 2px;
+    }
+    .deck-title {
+      margin: 0 0 5px;
+      color: #d1d5db;
+      font-size: 0.95rem;
+      overflow-wrap: anywhere;
+    }
+    .slide-position {
+      margin: 0;
+      font-size: clamp(2rem, 10vw, 3.5rem);
+      line-height: 1;
+      font-weight: 800;
+    }
+    .primary-controls {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      min-height: 0;
+    }
+    .nav-button {
+      border: 1px solid #4b5563;
+      border-radius: 8px;
+      background: #1f2937;
+      color: #fff;
+      min-height: 220px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      cursor: pointer;
+    }
+    .nav-button:active {
+      background: #374151;
+      transform: translateY(1px);
+    }
+    .nav-icon {
+      font-size: clamp(4rem, 22vw, 7rem);
+      line-height: 0.8;
+      font-weight: 300;
+    }
+    .nav-label {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    .secondary-controls {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 10px;
+      align-items: center;
+    }
+    .small-button {
+      height: 50px;
+      border: 1px solid #4b5563;
+      border-radius: 8px;
+      background: #1f2937;
+      color: #fff;
+      padding: 0 16px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .jump-control {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 8px;
+    }
+    .jump-control input {
+      width: 100%;
+      height: 50px;
+      border: 1px solid #4b5563;
+      border-radius: 8px;
+      background: #fff;
+      color: #111827;
+      padding: 0 14px;
+      font-size: 1.1rem;
+    }
+    @media (max-width: 420px) {
+      .remote { gap: 14px; }
+      .nav-button { min-height: 190px; }
+      .small-button { padding: 0 12px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="remote">
+    <header class="header">
+      <h1>Slide Remote</h1>
+      <div class="status" id="status">
+        <span class="status-dot"></span>
+        <span id="statusText">Connecting</span>
+      </div>
+    </header>
+
+    <section class="now-playing" aria-live="polite">
+      <p class="deck-title" id="deckTitle">Waiting for presentation</p>
+      <p class="slide-position"><span id="currentSlide">-</span> / <span id="totalSlides">-</span></p>
+    </section>
+
+    <section class="primary-controls" aria-label="Slide navigation">
+      <button type="button" class="nav-button" data-command="previous" aria-label="Previous slide">
+        <span class="nav-icon" aria-hidden="true">&#8592;</span>
+        <span class="nav-label">Previous</span>
+      </button>
+      <button type="button" class="nav-button" data-command="next" aria-label="Next slide">
+        <span class="nav-icon" aria-hidden="true">&#8594;</span>
+        <span class="nav-label">Next</span>
+      </button>
+    </section>
+
+    <section class="secondary-controls" aria-label="Jump controls">
+      <button type="button" class="small-button" data-command="first">First</button>
+      <div class="jump-control">
+        <input type="number" id="slideInput" min="1" inputmode="numeric" aria-label="Slide number" placeholder="Slide" />
+        <button type="button" class="small-button" id="goButton">Go</button>
+      </div>
+      <button type="button" class="small-button" data-command="last">Last</button>
+    </section>
+  </main>
+
+  <script>
+    const status = document.getElementById('status');
+    const statusText = document.getElementById('statusText');
+    const deckTitle = document.getElementById('deckTitle');
+    const currentSlide = document.getElementById('currentSlide');
+    const totalSlides = document.getElementById('totalSlides');
+    const slideInput = document.getElementById('slideInput');
+    const goButton = document.getElementById('goButton');
+
+    function setConnected(connected) {
+      status.classList.toggle('connected', connected);
+      statusText.textContent = connected ? 'Connected' : 'Reconnecting';
+    }
+
+    function applyState(state) {
+      deckTitle.textContent = state.deckTitle || 'Slideshow';
+      currentSlide.textContent = state.slide || '-';
+      totalSlides.textContent = state.totalSlides || '-';
+      if (state.totalSlides) {
+        slideInput.max = String(state.totalSlides);
+      }
+    }
+
+    async function sendCommand(command, slide) {
+      try {
+        const response = await fetch('/api/remote/command', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ command, slide })
+        });
+        if (!response.ok) throw new Error('Command failed');
+      } catch (error) {
+        setConnected(false);
+      }
+    }
+
+    document.querySelectorAll('[data-command]').forEach(button => {
+      button.addEventListener('click', () => sendCommand(button.dataset.command));
+    });
+
+    function goToSlide() {
+      const slide = Number.parseInt(slideInput.value, 10);
+      if (!Number.isInteger(slide) || slide < 1) return;
+      sendCommand('goto', slide);
+      slideInput.value = '';
+    }
+
+    goButton.addEventListener('click', goToSlide);
+    slideInput.addEventListener('keydown', event => {
+      if (event.key === 'Enter') goToSlide();
+    });
+
+    const events = new EventSource('/api/remote/events');
+    events.addEventListener('open', () => setConnected(true));
+    events.addEventListener('error', () => setConnected(false));
+    events.addEventListener('state', event => applyState(JSON.parse(event.data)));
+  </script>
+</body>
+</html>

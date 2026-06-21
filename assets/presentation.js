@@ -161,6 +161,8 @@
 
   let currentSlide = 1;
   const totalSlides = slideElements.length;
+  let remoteControlActive = false;
+  let remoteEventSource = null;
   const deckController = document.getElementById('deckController');
   const deckControllerToggle = document.getElementById('deckControllerToggle');
   const deckControllerPanel = document.getElementById('deckControllerPanel');
@@ -339,6 +341,78 @@
     }
 
     animateSlideContent();
+    publishRemoteState();
+  }
+
+  function publishRemoteState() {
+    if (!remoteControlActive) return;
+
+    global.fetch('/api/remote/state', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        deckId: resolvedDeckId,
+        deckTitle: deck.title || resolvedDeckId,
+        slide: currentSlide,
+        totalSlides
+      })
+    }).catch(() => {
+      remoteControlActive = false;
+    });
+  }
+
+  function goToSlideNumber(target) {
+    if (!Number.isInteger(target)) return;
+    const clamped = Math.min(Math.max(target, 1), totalSlides);
+    if (clamped !== currentSlide) {
+      currentSlide = clamped;
+      updateSlide();
+    } else {
+      publishRemoteState();
+    }
+  }
+
+  function handleRemoteCommand(event) {
+    let payload;
+    try {
+      payload = JSON.parse(event.data);
+    } catch (error) {
+      return;
+    }
+
+    if (payload.command === 'previous') {
+      changeSlide(-1);
+    } else if (payload.command === 'next') {
+      changeSlide(1);
+    } else if (payload.command === 'first') {
+      goToSlideNumber(1);
+    } else if (payload.command === 'last') {
+      goToSlideNumber(totalSlides);
+    } else if (payload.command === 'goto') {
+      goToSlideNumber(payload.slide);
+    }
+  }
+
+  async function initRemoteControl() {
+    try {
+      const response = await global.fetch('/api/remote/state', { cache: 'no-store' });
+      const contentType = response.headers.get('content-type') || '';
+      if (!response.ok || !contentType.includes('application/json')) return;
+
+      remoteControlActive = true;
+      remoteEventSource = new EventSource('/api/remote/events');
+      remoteEventSource.addEventListener('command', handleRemoteCommand);
+      remoteEventSource.addEventListener('open', () => {
+        remoteControlActive = true;
+        publishRemoteState();
+      });
+      remoteEventSource.addEventListener('error', () => {
+        remoteControlActive = false;
+      });
+      publishRemoteState();
+    } catch (error) {
+      remoteControlActive = false;
+    }
   }
 
   function animateSlideContent() {
@@ -492,11 +566,7 @@
     if (!slideJumpInput) return;
     const target = parseInt(slideJumpInput.value, 10);
     if (Number.isNaN(target)) return;
-    const clamped = Math.min(Math.max(target, 1), totalSlides);
-    if (clamped !== currentSlide) {
-      currentSlide = clamped;
-      updateSlide();
-    }
+    goToSlideNumber(target);
     slideJumpInput.value = '';
   }
 
@@ -931,6 +1001,7 @@
   }
 
   renderDeckController();
+  initRemoteControl();
   updateSlide();
   updateAttendeesFromInput();
   if (global.gsap) {

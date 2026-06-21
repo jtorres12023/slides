@@ -31,6 +31,17 @@ Then open:
 - `http://localhost:3000/slideshow`
 - `http://localhost:3000/deck/noah-grace`
 
+## Phone Remote
+
+Run the local server on the presentation computer. Put the computer and phone on the same Wi-Fi network.
+
+1. Open the slideshow on the computer using the local server URL.
+2. Look in the server terminal for the printed `Phone remote` URL.
+3. Open that URL on the phone.
+4. Use Previous, Next, First, Last, or jump to a slide number.
+
+The remote is intentionally simple and has no authentication. It is available only from the local Node server, not the GitHub Pages site.
+
 GitHub Pages uses query-string deck links rather than the local server's short `/deck/...` routes.
 
 ## Switch Decks
