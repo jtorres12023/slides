@@ -213,6 +213,47 @@
         </div>
       </div>
 
+      <div class="slide scripture-slide">
+        <div class="slide-content" style="max-width: 1250px;">
+          <h1>2 Samuel 5:17-19</h1>
+          <div class="highlight-box">
+            <p style="font-size: 1.4em;"><strong>17</strong> But when the Philistines heard that they had anointed David king over Israel, all the Philistines came up to seek David; and David heard of it, and went down to the hold.</p>
+            <p style="font-size: 1.4em;"><strong>18</strong> The Philistines also came and spread themselves in the valley of Rephaim.</p>
+            <p style="font-size: 1.4em; margin-bottom: 0;"><strong>19</strong> And David inquired of the Lord, saying, Shall I go up to the Philistines? wilt thou deliver them into mine hand? And the Lord said unto David, Go up: for I will doubtless deliver the Philistines into thine hand.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide scripture-slide">
+        <div class="slide-content" style="max-width: 1250px;">
+          <h1>2 Samuel 5:20-21</h1>
+          <div class="highlight-box">
+            <p style="font-size: 1.5em;"><strong>20</strong> And David came to Baal-perazim, and David smote them there, and said, The Lord hath broken forth upon mine enemies before me, as the breach of waters. Therefore he called the name of that place Baal-perazim.</p>
+            <p style="font-size: 1.5em; margin-bottom: 0;"><strong>21</strong> And there they left their images, and David and his men burned them.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide scripture-slide">
+        <div class="slide-content" style="max-width: 1250px;">
+          <h1>2 Samuel 5:22-23</h1>
+          <div class="highlight-box">
+            <p style="font-size: 1.55em;"><strong>22</strong> And the Philistines came up yet again, and spread themselves in the valley of Rephaim.</p>
+            <p style="font-size: 1.55em; margin-bottom: 0;"><strong>23</strong> And when David inquired of the Lord, he said, Thou shalt not go up; but fetch a compass behind them, and come upon them over against the mulberry trees.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide scripture-slide">
+        <div class="slide-content" style="max-width: 1250px;">
+          <h1>2 Samuel 5:24-25</h1>
+          <div class="highlight-box">
+            <p style="font-size: 1.5em;"><strong>24</strong> And let it be, when thou hearest the sound of a going in the tops of the mulberry trees, that then thou shalt bestir thyself: for then shall the Lord go out before thee, to smite the host of the Philistines.</p>
+            <p style="font-size: 1.5em; margin-bottom: 0;"><strong>25</strong> And David did so, as the Lord had commanded him; and smote the Philistines from Geba until thou come to Gazer.</p>
+          </div>
+        </div>
+      </div>
+
       <div class="slide">
         <div class="slide-content">
           <h1>Jesus Christ Is the Eternal King</h1>
