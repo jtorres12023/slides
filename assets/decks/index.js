@@ -16,7 +16,13 @@
       id: 'june21',
       title: "The Battle Is the Lord's",
       description: 'June 21 lesson slides about David, Goliath, forgiveness, revelation, and Jesus Christ as Eternal King.',
-      path: 'assets/decks/june21.js',
+      path: 'assets/decks/june21.js'
+    },
+    {
+      id: 'june29-july5',
+      title: 'If the Lord Be God, Follow Him',
+      description: 'June 29-July 5 lesson slides on Elijah, Jeroboam, the widow of Zarephath, Mount Carmel, and the still small voice.',
+      path: 'assets/decks/june29-july5.js',
       default: true
     },
     {
