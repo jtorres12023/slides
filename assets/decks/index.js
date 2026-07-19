@@ -22,7 +22,13 @@
       id: 'june29-july5',
       title: 'If the Lord Be God, Follow Him',
       description: 'June 29-July 5 lesson slides on Elijah, Jeroboam, the widow of Zarephath, Mount Carmel, and the still small voice.',
-      path: 'assets/decks/june29-july5.js',
+      path: 'assets/decks/june29-july5.js'
+    },
+    {
+      id: 'july13-19',
+      title: 'He Trusted in the Lord God of Israel',
+      description: 'July 13-19 lesson slides on Hezekiah, Josiah, trusting the Lord, scripture-led reform, and covenants.',
+      path: 'assets/decks/july13-19.js',
       default: true
     },
     {
