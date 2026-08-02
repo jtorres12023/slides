@@ -28,7 +28,13 @@
       id: 'july13-19',
       title: 'He Trusted in the Lord God of Israel',
       description: 'July 13-19 lesson slides on Hezekiah, Josiah, trusting the Lord, scripture-led reform, and covenants.',
-      path: 'assets/decks/july13-19.js',
+      path: 'assets/decks/july13-19.js'
+    },
+    {
+      id: 'aug2-great-work',
+      title: 'I Am Doing a Great Work',
+      description: 'July 27-August 2 lesson slides on Ezra, Nehemiah, temple joy, opposition, and scripture study.',
+      path: 'assets/decks/aug2-great-work.js',
       default: true
     },
     {

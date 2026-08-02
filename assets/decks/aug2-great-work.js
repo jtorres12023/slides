@@ -1,0 +1,341 @@
+(function initAugTwoGreatWorkDeck(global) {
+  global.SLIDE_DECKS = global.SLIDE_DECKS || {};
+
+  global.SLIDE_DECKS['aug2-great-work'] = {
+    id: 'aug2-great-work',
+    title: 'I Am Doing a Great Work',
+    backgroundImages: [
+      'assets/image1.jpg'
+    ],
+    slidesHtml: `
+      <div class="slide">
+        <div class="slide-content">
+          <h1>I Am Doing a Great Work</h1>
+          <p class="subtitle">Ezra 1; 3-7; Nehemiah 2; 4-6; 8</p>
+          <div class="highlight-box" style="max-width: 980px; margin: 24px auto 0; text-align: center;">
+            <p style="font-size: 1.9em; margin-bottom: 0;"><strong>The Lord gathers, strengthens, and protects His people as they build His work.</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="slide-content">
+          <h1>Opening Question</h1>
+          <div class="highlight-box" style="text-align: center;">
+            <p style="font-size: 1.9em; margin-bottom: 0;"><strong>What important work has the Lord given you in this season of your life?</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="slide-content">
+          <h1>Seventy Years Later</h1>
+          <div class="highlight-box">
+            <p>Jerusalem had been destroyed.</p>
+            <p>The temple had been burned.</p>
+            <p>Many of the people had lived their whole lives in captivity.</p>
+            <p style="margin-bottom: 0;"><strong>But the Lord had not forgotten His covenant people.</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide scripture-slide">
+        <div class="slide-content" style="max-width: 1450px; width: 92vw; padding: 38px 48px;">
+          <h1>Ezra 1:1-3</h1>
+          <div class="highlight-box">
+            <p style="font-size: 1.45em;"><strong>1</strong> ... the Lord stirred up the spirit of Cyrus king of Persia, that he made a proclamation throughout all his kingdom ...</p>
+            <p style="font-size: 1.45em;"><strong>2</strong> Thus saith Cyrus king of Persia, The Lord God of heaven hath given me all the kingdoms of the earth; and he hath charged me to build him an house at Jerusalem.</p>
+            <p style="font-size: 1.45em; margin-bottom: 0;"><strong>3</strong> Who is there among you of all his people? his God be with him, and let him go up to Jerusalem ... and build the house of the Lord God of Israel.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="slide-content">
+          <h1>The Lord Can Work Through Many People</h1>
+          <p class="subtitle">Ezra 1</p>
+          <div class="highlight-box" style="text-align: center;">
+            <p style="font-size: 1.75em;">Cyrus was not an Israelite prophet, but the Lord used him to open a way home.</p>
+            <p style="font-size: 1.75em; margin-bottom: 0;"><strong>Who has helped you do God's work in unexpected ways?</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide scripture-slide">
+        <div class="slide-content" style="max-width: 1450px; width: 92vw; padding: 38px 48px;">
+          <h1>Ezra 1:5-6</h1>
+          <div class="highlight-box">
+            <p style="font-size: 1.65em;"><strong>5</strong> Then rose up ... all them whose spirit God had raised, to go up to build the house of the Lord which is in Jerusalem.</p>
+            <p style="font-size: 1.65em; margin-bottom: 0;"><strong>6</strong> And all they that were about them strengthened their hands ... beside all that was willingly offered.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="slide-content">
+          <h1>How the Work Begins</h1>
+          <div class="two-column" style="margin-top: 22px;">
+            <div class="highlight-box"><p>God stirs hearts</p></div>
+            <div class="highlight-box"><p>People choose to rise</p></div>
+            <div class="highlight-box"><p>Others strengthen hands</p></div>
+            <div class="highlight-box"><p>Willing offerings move the work</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="slide-content">
+          <h1>The House of the Lord Is a Place of Joy</h1>
+          <p class="subtitle">Ezra 3; 6</p>
+          <div class="highlight-box" style="text-align: center;">
+            <p style="font-size: 1.75em;">The returned Jews rebuilt the altar, laid the foundation, and later dedicated the temple.</p>
+            <p style="font-size: 1.75em; margin-bottom: 0;"><strong>Temple work is covenant work, and covenant work brings joy.</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide scripture-slide">
+        <div class="slide-content" style="max-width: 1450px; width: 92vw; padding: 38px 48px;">
+          <h1>Ezra 3:10-11</h1>
+          <div class="highlight-box">
+            <p style="font-size: 1.5em;"><strong>10</strong> And when the builders laid the foundation of the temple of the Lord, they set the priests ... with trumpets, and the Levites ... with cymbals, to praise the Lord.</p>
+            <p style="font-size: 1.5em; margin-bottom: 0;"><strong>11</strong> And they sang together ... because he is good, for his mercy endureth for ever toward Israel. And all the people shouted with a great shout.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide scripture-slide">
+        <div class="slide-content" style="max-width: 1450px; width: 92vw; padding: 38px 48px;">
+          <h1>Ezra 3:12-13</h1>
+          <div class="highlight-box">
+            <p style="font-size: 1.55em;"><strong>12</strong> ... many of the priests and Levites and chief of the fathers ... wept with a loud voice; and many shouted aloud for joy:</p>
+            <p style="font-size: 1.55em; margin-bottom: 0;"><strong>13</strong> So that the people could not discern the noise of the shout of joy from the noise of the weeping of the people.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="slide-content">
+          <h1>Joy Can Be Complicated</h1>
+          <div class="highlight-box" style="text-align: center;">
+            <p style="font-size: 1.75em;">Some shouted. Some wept. All were standing at the beginning of a restored holy place.</p>
+            <p style="font-size: 1.75em; margin-bottom: 0;"><strong>When have you felt both grief and gratitude in the Lord's work?</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide scripture-slide">
+        <div class="slide-content" style="max-width: 1450px; width: 92vw; padding: 38px 48px;">
+          <h1>Ezra 6:14, 16, 22</h1>
+          <div class="highlight-box">
+            <p style="font-size: 1.42em;"><strong>14</strong> And the elders of the Jews builded, and they prospered through the prophesying of Haggai ... and Zechariah ... And they builded, and finished it.</p>
+            <p style="font-size: 1.42em;"><strong>16</strong> ... the children of the captivity, kept the dedication of this house of God with joy.</p>
+            <p style="font-size: 1.42em; margin-bottom: 0;"><strong>22</strong> ... the Lord had made them joyful ... to strengthen their hands in the work of the house of God.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="slide-content">
+          <h1>Ezra Prepared His Heart</h1>
+          <p class="subtitle">Ezra 7</p>
+          <div class="highlight-box" style="text-align: center;">
+            <p style="font-size: 1.75em; margin-bottom: 0;"><strong>Before Ezra taught the people, he chose to seek, do, and then teach the Lord's law.</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide scripture-slide">
+        <div class="slide-content" style="max-width: 1450px; width: 92vw; padding: 38px 48px;">
+          <h1>Ezra 7:10</h1>
+          <div class="highlight-box">
+            <p style="font-size: 2em; margin-bottom: 0;"><strong>10</strong> For Ezra had prepared his heart to seek the law of the Lord, and to do it, and to teach in Israel statutes and judgments.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="slide-content">
+          <h1>A Pattern for Spiritual Leadership</h1>
+          <div class="two-column" style="margin-top: 22px;">
+            <div class="highlight-box"><p>Prepare the heart</p></div>
+            <div class="highlight-box"><p>Seek the word</p></div>
+            <div class="highlight-box"><p>Do what it says</p></div>
+            <div class="highlight-box"><p>Teach from lived faith</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="slide-content">
+          <h1>Nehemiah Sees the Broken Wall</h1>
+          <p class="subtitle">Nehemiah 2</p>
+          <div class="highlight-box" style="text-align: center;">
+            <p style="font-size: 1.75em;">Nehemiah did not ignore the damage, and he did not let the damage define the future.</p>
+            <p style="font-size: 1.75em; margin-bottom: 0;"><strong>He prayed, planned, inspected, and invited others to build.</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide scripture-slide">
+        <div class="slide-content" style="max-width: 1450px; width: 92vw; padding: 38px 48px;">
+          <h1>Nehemiah 2:4-5, 8</h1>
+          <div class="highlight-box">
+            <p style="font-size: 1.5em;"><strong>4</strong> Then the king said unto me, For what dost thou make request? So I prayed to the God of heaven.</p>
+            <p style="font-size: 1.5em;"><strong>5</strong> ... send me unto Judah ... that I may build it.</p>
+            <p style="font-size: 1.5em; margin-bottom: 0;"><strong>8</strong> ... And the king granted me, according to the good hand of my God upon me.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide scripture-slide">
+        <div class="slide-content" style="max-width: 1450px; width: 92vw; padding: 38px 48px;">
+          <h1>Nehemiah 2:17-18</h1>
+          <div class="highlight-box">
+            <p style="font-size: 1.55em;"><strong>17</strong> ... come, and let us build up the wall of Jerusalem, that we be no more a reproach.</p>
+            <p style="font-size: 1.55em; margin-bottom: 0;"><strong>18</strong> ... And they said, Let us rise up and build. So they strengthened their hands for this good work.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="slide-content">
+          <h1>Opposition Does Not Mean the Work Is Wrong</h1>
+          <p class="subtitle">Nehemiah 2; 4; 6</p>
+          <div class="highlight-box" style="text-align: center;">
+            <p style="font-size: 1.75em;">They were mocked, threatened, distracted, accused, and pressured by fear.</p>
+            <p style="font-size: 1.75em; margin-bottom: 0;"><strong>Nehemiah kept turning back to God and back to the work.</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide scripture-slide">
+        <div class="slide-content" style="max-width: 1450px; width: 92vw; padding: 38px 48px;">
+          <h1>Nehemiah 4:6, 9</h1>
+          <div class="highlight-box">
+            <p style="font-size: 1.75em;"><strong>6</strong> So built we the wall ... for the people had a mind to work.</p>
+            <p style="font-size: 1.75em; margin-bottom: 0;"><strong>9</strong> Nevertheless we made our prayer unto our God, and set a watch against them day and night.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide scripture-slide">
+        <div class="slide-content" style="max-width: 1450px; width: 92vw; padding: 38px 48px;">
+          <h1>Nehemiah 4:14</h1>
+          <div class="highlight-box">
+            <p style="font-size: 1.9em; margin-bottom: 0;"><strong>14</strong> Be not ye afraid of them: remember the Lord, which is great and terrible, and fight for your brethren, your sons, and your daughters, your wives, and your houses.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="slide-content">
+          <h1>Build and Guard</h1>
+          <p class="subtitle">Nehemiah 4:17-20</p>
+          <div class="highlight-box" style="text-align: center;">
+            <p style="font-size: 1.75em;">The builders worked with one hand and held a weapon with the other.</p>
+            <p style="font-size: 1.75em; margin-bottom: 0;"><strong>What do we need to build? What do we need to guard?</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide scripture-slide">
+        <div class="slide-content" style="max-width: 1450px; width: 92vw; padding: 38px 48px;">
+          <h1>Nehemiah 6:2-3</h1>
+          <div class="highlight-box">
+            <p style="font-size: 1.55em;"><strong>2</strong> ... Come, let us meet together ... But they thought to do me mischief.</p>
+            <p style="font-size: 1.8em; margin-bottom: 0;"><strong>3</strong> And I sent messengers unto them, saying, I am doing a great work, so that I cannot come down.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="slide-content">
+          <h1>I Cannot Come Down</h1>
+          <div class="highlight-box" style="text-align: center;">
+            <p style="font-size: 1.75em;">Some invitations pull us away from the work God has given us.</p>
+            <p style="font-size: 1.75em; margin-bottom: 0;"><strong>What helps you recognize a distraction before it pulls you down?</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide scripture-slide">
+        <div class="slide-content" style="max-width: 1450px; width: 92vw; padding: 38px 48px;">
+          <h1>Nehemiah 6:9, 15-16</h1>
+          <div class="highlight-box">
+            <p style="font-size: 1.35em;"><strong>9</strong> For they all made us afraid ... Now therefore, O God, strengthen my hands.</p>
+            <p style="font-size: 1.35em;"><strong>15</strong> So the wall was finished ... in fifty and two days.</p>
+            <p style="font-size: 1.35em; margin-bottom: 0;"><strong>16</strong> ... they perceived that this work was wrought of our God.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="slide-content">
+          <h1>The Scriptures Bless Us</h1>
+          <p class="subtitle">Nehemiah 8</p>
+          <div class="highlight-box" style="text-align: center;">
+            <p style="font-size: 1.75em;">After the wall was rebuilt, the people gathered to hear the word of God.</p>
+            <p style="font-size: 1.75em; margin-bottom: 0;"><strong>Protection outside the city mattered, but conversion inside the people mattered more.</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide scripture-slide">
+        <div class="slide-content" style="max-width: 1450px; width: 92vw; padding: 38px 48px;">
+          <h1>Nehemiah 8:3, 5-6</h1>
+          <div class="highlight-box">
+            <p style="font-size: 1.35em;"><strong>3</strong> ... and the ears of all the people were attentive unto the book of the law.</p>
+            <p style="font-size: 1.35em;"><strong>5</strong> And Ezra opened the book in the sight of all the people ... and when he opened it, all the people stood up:</p>
+            <p style="font-size: 1.35em; margin-bottom: 0;"><strong>6</strong> ... all the people answered, Amen, Amen ... and they bowed their heads, and worshipped the Lord.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide scripture-slide">
+        <div class="slide-content" style="max-width: 1450px; width: 92vw; padding: 38px 48px;">
+          <h1>Nehemiah 8:8, 10, 12</h1>
+          <div class="highlight-box">
+            <p style="font-size: 1.35em;"><strong>8</strong> So they read in the book in the law of God distinctly, and gave the sense, and caused them to understand the reading.</p>
+            <p style="font-size: 1.35em;"><strong>10</strong> ... for the joy of the Lord is your strength.</p>
+            <p style="font-size: 1.35em; margin-bottom: 0;"><strong>12</strong> ... to make great mirth, because they had understood the words that were declared unto them.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="slide-content">
+          <h1>Understanding Brings Joy</h1>
+          <div class="two-column" style="margin-top: 22px;">
+            <div class="highlight-box"><p>Hear the word</p></div>
+            <div class="highlight-box"><p>Give it attention</p></div>
+            <div class="highlight-box"><p>Seek understanding</p></div>
+            <div class="highlight-box"><p>Let joy become strength</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="slide-content">
+          <h1>What Is Your Great Work?</h1>
+          <div class="two-column" style="margin-top: 22px;">
+            <div class="highlight-box"><p>Build faith in Jesus Christ</p></div>
+            <div class="highlight-box"><p>Keep temple covenants</p></div>
+            <div class="highlight-box"><p>Strengthen your family</p></div>
+            <div class="highlight-box"><p>Serve where the Lord has placed you</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="slide-content">
+          <h1>Closing Testimony</h1>
+          <div class="highlight-box" style="text-align: center;">
+            <p style="font-size: 1.75em;">The Lord still gathers His people, strengthens their hands, and helps them finish His work.</p>
+            <p style="font-size: 1.75em; margin-bottom: 0;"><strong>Because His work is great, we do not have to come down.</strong></p>
+          </div>
+        </div>
+      </div>
+    `
+  };
+})(window);
