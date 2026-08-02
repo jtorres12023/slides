@@ -22,7 +22,7 @@
         <div class="slide-content">
           <h1>Opening Question</h1>
           <div class="highlight-box" style="text-align: center;">
-            <p style="font-size: 1.9em; margin-bottom: 0;"><strong>What important work has the Lord given you in this season of your life?</strong></p>
+            <p style="font-size: 1.9em; margin-bottom: 0;"><strong>What is one good thing you are working on right now at home, at church, or at school?</strong></p>
           </div>
         </div>
       </div>
@@ -64,7 +64,7 @@
           <p class="subtitle">Ezra 1</p>
           <div class="highlight-box" style="text-align: center;">
             <p style="font-size: 1.75em;">Cyrus was not an Israelite prophet, but the Lord used him to open a way home.</p>
-            <p style="font-size: 1.75em; margin-bottom: 0;"><strong>Who has helped you do God's work in unexpected ways?</strong></p>
+            <p style="font-size: 1.75em; margin-bottom: 0;"><strong>Who has helped you do something good? What did they do?</strong></p>
           </div>
         </div>
       </div>
@@ -127,7 +127,7 @@
           <h1>Joy Can Be Complicated</h1>
           <div class="highlight-box" style="text-align: center;">
             <p style="font-size: 1.75em;">Some shouted. Some wept. All were standing at the beginning of a restored holy place.</p>
-            <p style="font-size: 1.75em; margin-bottom: 0;"><strong>When have you felt both grief and gratitude in the Lord's work?</strong></p>
+            <p style="font-size: 1.75em; margin-bottom: 0;"><strong>Why do you think some people shouted for joy while others wept?</strong></p>
           </div>
         </div>
       </div>
@@ -250,7 +250,7 @@
           <p class="subtitle">Nehemiah 4:17-20</p>
           <div class="highlight-box" style="text-align: center;">
             <p style="font-size: 1.75em;">The builders worked with one hand and held a weapon with the other.</p>
-            <p style="font-size: 1.75em; margin-bottom: 0;"><strong>What do we need to build? What do we need to guard?</strong></p>
+            <p style="font-size: 1.75em; margin-bottom: 0;"><strong>What habits build faith in Jesus Christ? What helps protect that faith?</strong></p>
           </div>
         </div>
       </div>
@@ -270,7 +270,7 @@
           <h1>I Cannot Come Down</h1>
           <div class="highlight-box" style="text-align: center;">
             <p style="font-size: 1.75em;">Some invitations pull us away from the work God has given us.</p>
-            <p style="font-size: 1.75em; margin-bottom: 0;"><strong>What helps you recognize a distraction before it pulls you down?</strong></p>
+            <p style="font-size: 1.75em; margin-bottom: 0;"><strong>What distractions can pull us away from something important?</strong></p>
           </div>
         </div>
       </div>
@@ -341,7 +341,7 @@
 
       <div class="slide">
         <div class="slide-content">
-          <h1>What Is Your Great Work?</h1>
+          <h1>Which Great Work Will You Strengthen?</h1>
           <div class="two-column" style="margin-top: 22px;">
             <div class="highlight-box"><p>Build faith in Jesus Christ</p></div>
             <div class="highlight-box"><p>Keep temple covenants</p></div>
