@@ -34,7 +34,13 @@
       id: 'aug2-great-work',
       title: 'I Am Doing a Great Work',
       description: 'July 27-August 2 lesson slides on Ezra, Nehemiah, temple joy, opposition, and scripture study.',
-      path: 'assets/decks/aug2-great-work.js',
+      path: 'assets/decks/aug2-great-work.js'
+    },
+    {
+      id: 'aug16-job-trust',
+      title: 'Yet Will I Trust in Him',
+      description: 'August 10-16 lesson slides on Job, suffering, trust, the Redeemer, and God\'s perspective.',
+      path: 'assets/decks/aug16-job-trust.js',
       default: true
     },
     {
