@@ -44,6 +44,12 @@
       default: true
     },
     {
+      id: 'sept13-wisdom',
+      title: 'Wisdom for the Path',
+      description: 'September 13 lesson slides for a student-led discussion of Proverbs and Ecclesiastes.',
+      path: 'assets/decks/sept13-wisdom.js'
+    },
+    {
       id: 'march1',
       title: 'Is Any Thing Too Hard for the Lord?',
       description: 'Slides from Genesis 17 and Genesis 22.',
