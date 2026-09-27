@@ -50,6 +50,18 @@
       path: 'assets/decks/sept13-wisdom.js'
     },
     {
+      id: 'sept20-isaiah-salvation',
+      title: 'God Is My Salvation',
+      description: 'September 20 lesson slides for a student-led discussion of Isaiah 1-12.',
+      path: 'assets/decks/sept20-isaiah-salvation.js'
+    },
+    {
+      id: 'sept27-isaiah-passages',
+      title: 'Isaiah Passages for Class Reading',
+      description: 'September 27 scripture-reading slides with the full KJV text of each selected Isaiah passage.',
+      path: 'assets/decks/sept27-isaiah-passages.js'
+    },
+    {
       id: 'march1',
       title: 'Is Any Thing Too Hard for the Lord?',
       description: 'Slides from Genesis 17 and Genesis 22.',
