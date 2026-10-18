@@ -62,6 +62,12 @@
       path: 'assets/decks/sept27-isaiah-passages.js'
     },
     {
+      id: 'oct18-isaiah-redeemer',
+      title: 'The Redeemer Shall Come to Zion',
+      description: 'October 18 scripture-reading slides for Isaiah 58-66.',
+      path: 'assets/decks/oct18-isaiah-redeemer.js'
+    },
+    {
       id: 'march1',
       title: 'Is Any Thing Too Hard for the Lord?',
       description: 'Slides from Genesis 17 and Genesis 22.',
