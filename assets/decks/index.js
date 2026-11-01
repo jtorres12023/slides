@@ -68,6 +68,12 @@
       path: 'assets/decks/oct18-isaiah-redeemer.js'
     },
     {
+      id: 'nov1-jeremiah-hope',
+      title: 'I Will Turn Their Mourning into Joy',
+      description: 'November 1 scripture-reading slides for Jeremiah, Lamentations, covenant renewal, and hope in Jesus Christ.',
+      path: 'assets/decks/nov1-jeremiah-hope.js'
+    },
+    {
       id: 'march1',
       title: 'Is Any Thing Too Hard for the Lord?',
       description: 'Slides from Genesis 17 and Genesis 22.',
