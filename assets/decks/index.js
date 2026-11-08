@@ -74,6 +74,12 @@
       path: 'assets/decks/nov1-jeremiah-hope.js'
     },
     {
+      id: 'nov8-ezekiel-new-spirit',
+      title: 'A New Spirit Will I Put within You',
+      description: 'November 8 scripture-reading slides for Ezekiel 3, 33-34, 36-37, and 47.',
+      path: 'assets/decks/nov8-ezekiel-new-spirit.js'
+    },
+    {
       id: 'march1',
       title: 'Is Any Thing Too Hard for the Lord?',
       description: 'Slides from Genesis 17 and Genesis 22.',
