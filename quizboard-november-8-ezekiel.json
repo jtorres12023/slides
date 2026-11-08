@@ -3,7 +3,7 @@
   "version": 1,
   "title": "Ezekiel & Gospel Review",
   "createdAt": "2026-11-08T15:05:00.000Z",
-  "updatedAt": "2026-11-08T15:05:00.000Z",
+  "updatedAt": "2026-11-08T16:10:00.000Z",
   "categories": [
     {
       "id": "519995d6-6a16-4af5-b6bd-141d5711e716",
@@ -93,22 +93,25 @@
         {
           "id": "91a971c1-5dcd-4ed6-a411-4e0c6a18d878",
           "value": 100,
-          "promptHtml": "<p>This is where we make sacred covenants and feel closer to Jesus Christ.</p>",
-          "responseHtml": "<p><strong>The temple</strong></p>",
-          "media": null
+          "promptHtml": "<p>Identify this temple.</p>",
+          "responseHtml": "<p><strong>The Rexburg Idaho Temple</strong></p>",
+          "media": {
+            "type": "image",
+            "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rexburg%20Idaho%20Temple%20April%202007.jpeg?width=1600"
+          }
         },
         {
           "id": "2cef1d21-303c-4d87-b764-c71551588396",
           "value": 200,
-          "promptHtml": "<p>This ordinance unites families for eternity.</p>",
+          "promptHtml": "<p>This temple ordinance joins husbands, wives, and families together for eternity.</p>",
           "responseHtml": "<p><strong>Sealing</strong></p>",
           "media": null
         },
         {
           "id": "b6538805-1f22-4969-bd91-e5b447020708",
           "value": 300,
-          "promptHtml": "<p>This work helps provide saving ordinances for ancestors who have died.</p>",
-          "responseHtml": "<p><strong>Family history and temple work</strong></p>",
+          "promptHtml": "<p>Through this temple work, we perform saving ordinances for ancestors who have died and give them the opportunity to accept them.</p>",
+          "responseHtml": "<p><strong>Proxy temple ordinances (family history and temple work)</strong></p>",
           "media": null
         }
       ]
