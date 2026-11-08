@@ -1,0 +1,117 @@
+{
+  "id": "f74196ae-3fd1-4f55-a9ba-b391bf7f2519",
+  "version": 1,
+  "title": "Ezekiel & Gospel Review",
+  "createdAt": "2026-11-08T15:05:00.000Z",
+  "updatedAt": "2026-11-08T15:05:00.000Z",
+  "categories": [
+    {
+      "id": "519995d6-6a16-4af5-b6bd-141d5711e716",
+      "name": "This Week in Ezekiel",
+      "clues": [
+        {
+          "id": "4fe634f3-aa38-4433-99ee-2da9b2f62361",
+          "value": 100,
+          "promptHtml": "<p>Ezekiel said the Lord would give His people a new heart and a new _____.</p>",
+          "responseHtml": "<p><strong>Spirit</strong></p>",
+          "media": null
+        },
+        {
+          "id": "a8190a9c-5b31-4cdc-8e51-d2ba38ac7a7b",
+          "value": 200,
+          "promptHtml": "<p>In Ezekiel 34, Jesus Christ is compared to this person who searches for, feeds, and heals sheep.</p>",
+          "responseHtml": "<p><strong>A shepherd</strong></p>",
+          "media": null
+        },
+        {
+          "id": "bbd3df42-9f20-4e0a-b1e3-2246a32ebce2",
+          "value": 300,
+          "promptHtml": "<p>In Ezekiel 37, these became alive again after hearing the word of the Lord.</p>",
+          "responseHtml": "<p><strong>Dry bones</strong></p>",
+          "media": null
+        }
+      ]
+    },
+    {
+      "id": "c0b6e03a-e89a-4920-bbb4-85393e6ea9f9",
+      "name": "Primary Songs",
+      "clues": [
+        {
+          "id": "3ae4b29c-608e-4f75-ae70-10cc6c7f869b",
+          "value": 100,
+          "promptHtml": "<p>This song teaches that scripture stories help us \u201clearn the ways of God.\u201d</p>",
+          "responseHtml": "<p><strong>\u201cBook of Mormon Stories\u201d</strong></p>",
+          "media": null
+        },
+        {
+          "id": "6c5ee0f6-771f-49a8-9071-e8f801ff034a",
+          "value": 200,
+          "promptHtml": "<p>\u201cI hope they call me on a _____\u201d is the opening line of this song.</p>",
+          "responseHtml": "<p><strong>Mission</strong></p>",
+          "media": null
+        },
+        {
+          "id": "72caae7d-9e87-474f-a4ef-1fb47b786399",
+          "value": 300,
+          "promptHtml": "<p>This song reminds us to choose the right \u201cevery day.\u201d</p>",
+          "responseHtml": "<p><strong>\u201cChoose the Right Way\u201d</strong></p>",
+          "media": null
+        }
+      ]
+    },
+    {
+      "id": "5fdefe37-690d-41b9-86c3-9422aa94723b",
+      "name": "Book of Mormon Stories",
+      "clues": [
+        {
+          "id": "43c07726-8f5a-44f2-a66e-ca9304c75c13",
+          "value": 100,
+          "promptHtml": "<p>This prophet obeyed the Lord\u2019s command to build a ship before crossing the ocean.</p>",
+          "responseHtml": "<p><strong>Nephi</strong></p>",
+          "media": null
+        },
+        {
+          "id": "d5cc8c75-40fc-4452-a87d-4329fed209da",
+          "value": 200,
+          "promptHtml": "<p>This young man prayed for forgiveness and joy after making serious mistakes.</p>",
+          "responseHtml": "<p><strong>Alma the Younger</strong></p>",
+          "media": null
+        },
+        {
+          "id": "ff25d3f2-adbb-4381-9b85-7936c5739579",
+          "value": 300,
+          "promptHtml": "<p>This group of 2,000 young warriors was known for faith in the teachings of their mothers.</p>",
+          "responseHtml": "<p><strong>The stripling warriors</strong></p>",
+          "media": null
+        }
+      ]
+    },
+    {
+      "id": "63b68838-8c2e-4f12-b9a8-2e74c3ce446e",
+      "name": "Temples",
+      "clues": [
+        {
+          "id": "91a971c1-5dcd-4ed6-a411-4e0c6a18d878",
+          "value": 100,
+          "promptHtml": "<p>This is where we make sacred covenants and feel closer to Jesus Christ.</p>",
+          "responseHtml": "<p><strong>The temple</strong></p>",
+          "media": null
+        },
+        {
+          "id": "2cef1d21-303c-4d87-b764-c71551588396",
+          "value": 200,
+          "promptHtml": "<p>This ordinance unites families for eternity.</p>",
+          "responseHtml": "<p><strong>Sealing</strong></p>",
+          "media": null
+        },
+        {
+          "id": "b6538805-1f22-4969-bd91-e5b447020708",
+          "value": 300,
+          "promptHtml": "<p>This work helps provide saving ordinances for ancestors who have died.</p>",
+          "responseHtml": "<p><strong>Family history and temple work</strong></p>",
+          "media": null
+        }
+      ]
+    }
+  ]
+}
